@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Background Space Void Gradient -->
+    <linearGradient id="hBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0422" />
+      <stop offset="100%" stop-color="#020008" />
+    </linearGradient>
+
+    <!-- Neon Cyan Border Gradient -->
+    <linearGradient id="hBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Front White-to-Ice Face Gradient -->
+    <linearGradient id="hFaceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+
+    <!-- Cyber Cyan Accent Gradient -->
+    <linearGradient id="hCyanAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Space Squircle Background -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#hBgGrad)" stroke="url(#hBorderGrad)" stroke-width="2.5" />
+
+  <!-- Geometric "H" Cyber-Glyph (Pure vector paths, zero blur, maximum 16x16 tab clarity) -->
+  <g id="h-glyph">
+    <!-- Left Pillar Cyan Bevel -->
+    <polygon points="21,17 25,21 25,48 21,44" fill="url(#hCyanAccent)" />
+    <!-- Left Pillar White Face -->
+    <polygon points="17,17 21,17 21,49 17,49" fill="url(#hFaceGrad)" />
+
+    <!-- Right Pillar Cyan Bevel -->
+    <polygon points="39,20 43,16 43,47 39,47" fill="url(#hCyanAccent)" />
+    <!-- Right Pillar White Face -->
+    <polygon points="43,16 47,16 47,48 43,48" fill="url(#hFaceGrad)" />
+
+    <!-- Central Cyber Crossbar Bridge (Z-Angled) -->
+    <polygon points="21,30 39,24 39,32 21,38" fill="url(#hFaceGrad)" />
+    <polygon points="21,38 39,32 40,36 22,42" fill="url(#hCyanAccent)" />
+  </g>
+
+  <!-- Star Sparkle Accent (✦ Top-Right) -->
+  <path d="M 48 9 Q 48 13 44 13 Q 48 13 48 17 Q 48 13 52 13 Q 48 13 48 9 Z" fill="#00f2fe" />
+  <circle cx="48" cy="13" r="0.8" fill="#ffffff" />
+</svg>

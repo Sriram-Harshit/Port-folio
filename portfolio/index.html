@@ -3,231 +3,1240 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta
+      name="description"
+      content="Sri Ram Harshit — Full Stack Developer & AI Explorer. Architecting high-performance web systems and digital experiences across the cosmos."
+    />
+    <meta name="author" content="Sri Ram Harshit" />
+    <meta property="og:title" content="Sri Ram Harshit | Cosmic Odyssey Portfolio" />
+    <meta
+      property="og:description"
+      content="Turning ambitious ideas into scalable, resilient web applications with MERN Stack & Python."
+    />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/128088678?v=4" />
+    <meta property="og:type" content="website" />
+    <!-- Browser Tab Favicons & Mobile Touch Icons (H Cyber-Glyph) -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg?v=20261017_h_glyph_v4" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png?v=20261017_h_glyph_v4" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png?v=20261017_h_glyph_v4" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/favicon-192x192.png?v=20261017_h_glyph_v4" />
+    <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png?v=20261017_h_glyph_v4" />
+    <link rel="alternate icon" type="image/x-icon" href="favicon.ico?v=20261017_h_glyph_v4" />
     <title>Sri Ram Harshit | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts: Space Grotesk, Outfit, Inter, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css?v=20261017_orbital_pod_v23" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <script type="module" defer src="script.js"></script>
+    <script type="module" defer src="assets/js/script.js?v=20261017_skills_2x2_v22"></script>
   </head>
   <body>
-    <!-- Navbar -->
+    <!-- Interactive Background Cosmic Canvas -->
+    <canvas id="cosmic-canvas"></canvas>
+
+    <!-- Deep Nebula Glow Overlays -->
+    <div class="nebula nebula-cyan"></div>
+    <div class="nebula nebula-purple"></div>
+    <div class="nebula nebula-rose"></div>
+
+
+    <!-- Cockpit HUD Navbar -->
     <header class="navbar">
-      <div class="logo">Sri Ram<span> Harshit</span></div>
+      <div class="navbar-left">
+        <a href="#home" class="logo">
+          <span class="logo-symbol">✦</span> SRI RAM <span class="logo-accent">// HARSHIT</span>
+        </a>
+        <div class="hud-status" title="System Online">
+          <span class="pulse-dot"></span>
+          <span class="hud-text">ORBIT: ACTIVE</span>
+        </div>
+      </div>
+
       <nav>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certificates">Certificates</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home"><span class="nav-idx">00</span>Home</a></li>
+          <li><a href="#about"><span class="nav-idx">01</span>Dossier</a></li>
+          <li><a href="#skills"><span class="nav-idx">02</span>Avionics</a></li>
+          <li><a href="#projects"><span class="nav-idx">03</span>Expeditions</a></li>
+          <li><a href="#certificates"><span class="nav-idx">04</span>Credentials</a></li>
+          <li><a href="#contact"><span class="nav-idx">05</span>Uplink</a></li>
         </ul>
       </nav>
+
+      <div class="navbar-right">
+        <!-- Interactive Warp Speed Toggle Button -->
+        <button id="warp-btn" class="warp-btn" aria-label="Toggle Hyperdrive Warp Speed">
+          <i class="fas fa-meteor"></i>
+          <span class="warp-btn-text">WARP DRIVE</span>
+        </button>
+
+        <!-- Mobile Navigation Menu Toggle -->
+        <button
+          class="mobile-nav-toggle"
+          id="mobile-nav-toggle"
+          aria-label="Toggle Cockpit Navigation"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section ("Orbital Command") -->
     <section id="home" class="hero">
       <div class="hero-container">
-        <div class="hero-image">
-          <img
-            src="https://avatars.githubusercontent.com/u/9919?s=200&v=4"
-            alt="Shri Ram Harshit"
-          />
-          <!-- You can replace the image link with your photo -->
+        <!-- Planetary Orbital Avatar Frame -->
+        <div class="avatar-orbit-system">
+          <div class="orbit-ring orbit-ring-outer">
+            <span class="satellite satellite-1"></span>
+          </div>
+          <div class="orbit-ring orbit-ring-inner">
+            <span class="satellite satellite-2"></span>
+          </div>
+          <div class="hero-image-pod" id="hero-image-pod" title="Sri Ram Harshit">
+            <img
+              src="assets/images/profile-hero.jpg?v=20261017_custom_portrait_v1"
+              alt="Sri Ram Harshit"
+              id="hero-profile-img"
+            />
+          </div>
         </div>
+
         <div class="hero-text">
-          <h1>Hello, I'm <span>Sri Ram Harshit</span></h1>
-          <p>🚀 Full Stack Developer | AI Enthusiast | Problem Solver</p>
+          <div class="telemetry-pill">
+            <span class="telemetry-dot"></span>
+            <span>COSMIC TELEMETRY // SECTOR 00</span>
+          </div>
+          <h1>Architecting Modern <span class="stardust-text">Web Universes</span></h1>
+          <p class="hero-subtitle">
+            Full Stack Engineer & AI Explorer engineering resilient, scalable architectures
+            across the digital cosmos with <span class="highlight-cyan">MERN Stack</span> &amp; <span class="highlight-purple">Python</span>.
+          </p>
+
+          <!-- Telemetry Stats Strip -->
+          <div class="telemetry-strip">
+            <div class="telemetry-stat">
+              <span class="stat-number">03</span>
+              <span class="stat-label">EXPEDITIONS LAUNCHED</span>
+            </div>
+            <div class="telemetry-divider"></div>
+            <div class="telemetry-stat">
+              <span class="stat-number">10</span>
+              <span class="stat-label">FLIGHT CREDENTIALS</span>
+            </div>
+            <div class="telemetry-divider"></div>
+            <div class="telemetry-stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">SCALABLE ARCHITECTURE</span>
+            </div>
+          </div>
+
           <div class="hero-buttons">
-            <a href="#projects" class="btn primary">View My Projects</a>
-            <a href="#contact" class="btn secondary">Let's Connect</a>
+            <a href="#projects" class="btn cosmic-primary">
+              <span>View Expeditions</span>
+              <i class="fas fa-chevron-right"></i>
+            </a>
+            <a href="#contact" class="btn cosmic-secondary">
+              <span>Establish Uplink</span>
+              <i class="fas fa-satellite-dish"></i>
+            </a>
+            <button class="btn cosmic-dossier-btn" id="hero-dossier-btn" title="Inspect Flight Dossier (Resume)">
+              <i class="fas fa-file-contract"></i>
+              <span>Flight Dossier (CV)</span>
+            </button>
           </div>
+
+          <!-- Rocket Scroll-Down Descent Guide -->
+          <a href="#about" class="hero-rocket-scroll" aria-label="Engage rocket propulsion and scroll down">
+            <div class="rocket-hover-ship">
+              <i class="fas fa-rocket"></i>
+              <div class="rocket-flame-exhaust"></div>
+            </div>
+            <span class="rocket-scroll-text">IGNITE DESCENT</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section ("Mission Dossier") -->
     <section id="about" class="about">
-      <div class="about-container">
-        <div class="about-content">
-          <h2>About Me</h2>
-          <p class="tagline">
-            Turning ideas into modern, scalable web applications
+      <div class="section-header">
+        <span class="section-tag">// 01 DOSSIER</span>
+        <h2>Mission Directives &amp; Philosophy</h2>
+        <p class="section-sub">Turning ambitious visions into scalable, user-centric web applications.</p>
+      </div>
+
+      <div class="dossier-grid">
+        <!-- Bento Card 1: Core Flight Dossier & Bio -->
+        <div class="dossier-card dossier-main">
+          <div class="card-glow"></div>
+          <div class="card-corner-bracket corner-tl"></div>
+          <div class="card-corner-bracket corner-tr"></div>
+          <div class="card-corner-bracket corner-bl"></div>
+          <div class="card-corner-bracket corner-br"></div>
+
+          <!-- Pilot Cockpit Header Strip -->
+          <div class="dossier-pilot-header">
+            <div class="pilot-callsign">
+              <span class="callsign-dot"></span>
+              <span class="callsign-text"><i class="fas fa-terminal"></i> CALLSIGN: SRI RAM HARSHIT</span>
+            </div>
+            <div class="pilot-status-badge">
+              <span class="pulse-dot-green"></span>
+              <span>SOFTWARE ENGINEER INTERN @ EDVAK</span>
+            </div>
+          </div>
+
+          <h3 class="dossier-hero-title">
+            Full-Stack Software Engineer &amp; <span class="stardust-text">Web Architect</span>
+          </h3>
+
+          <!-- Cyber Directive Philosophy Box -->
+          <div class="mission-terminal-quote">
+            <div class="terminal-quote-topbar">
+              <div class="terminal-dots">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+              </div>
+              <span class="terminal-quote-filename"><i class="fas fa-code"></i> engineering_philosophy.env</span>
+              <span class="terminal-quote-status">SYNCHRONIZED</span>
+            </div>
+            <p class="terminal-quote-body">
+              <i class="fas fa-quote-left quote-icon"></i>
+              "Architecting scalable, resilient web universes centered on <strong>clean maintainable code</strong>, <strong>fast learning &amp; technology adaptability</strong>, and <strong>fluid user experiences</strong> that make a lasting impact."
+            </p>
+          </div>
+
+          <p class="dossier-narrative">
+            I'm <span class="highlight-white">Sri Ram Harshit</span>, an engineer passionate about building high-performance digital systems that stand the test of scale.
+          </p>
+          <p class="dossier-narrative">
+            From crafting pixel-perfect, interactive user interfaces to engineering resilient Node.js backends and relational SQL databases, I thrive on tackling complex architectural challenges and rapidly assimilating modern engineering stacks.
+          </p>
+          <p class="dossier-narrative">
+            Currently onboarded as a <strong>Software Engineer Intern at Edvak EHR</strong>
           </p>
 
-          <p>
-            I'm <span class="highlight">Sri Ram Harshit</span>, a passionate
-            <span class="highlight">Full Stack Developer</span> building
-            <span class="highlight">interactive, user-friendly web apps</span>.
-          </p>
-          <p>
-            I enjoy <span class="highlight">solving challenges</span>,
-            <span class="highlight">contributing to open source</span>, and
-            <span class="highlight">learning new technologies</span>.
-          </p>
-          <p>
-            My focus is on creating seamless
-            <span class="highlight">frontend experiences</span> and robust
-            <span class="highlight">backend systems</span> with
-            <span class="highlight">MERN Stack</span> &
-            <span class="highlight">Python</span>.
-          </p>
-          <p>
-            I strive to write
-            <span class="highlight">clean, maintainable code</span> and deliver
-            <span class="highlight">efficient, scalable solutions</span>
-            that make a real impact.
-          </p>
 
-          <div class="about-buttons">
-            <a href="#projects" class="btn primary">View Projects</a>
-            <a href="#contact" class="btn secondary">Contact Me</a>
+          <!-- Avionics Action Deck -->
+          <div class="dossier-actions-deck">
+            <a href="#projects" class="deck-action-btn primary">
+              <i class="fas fa-compass"></i>
+              <span>Inspect Expeditions</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#trajectory" class="deck-action-btn secondary">
+              <i class="fas fa-route"></i>
+              <span>Flight Trajectory</span>
+            </a>
+            <button class="deck-action-btn accent" id="dossier-preview-btn">
+              <i class="fas fa-file-contract"></i>
+              <span>View CV / Resume</span>
+              <i class="fas fa-expand-alt"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bento Card 2: Interactive Technical Directives -->
+        <div class="dossier-card dossier-directives">
+          <div class="card-glow"></div>
+          <div class="card-corner-bracket corner-tl"></div>
+          <div class="card-corner-bracket corner-tr"></div>
+          <div class="card-corner-bracket corner-bl"></div>
+          <div class="card-corner-bracket corner-br"></div>
+
+          <div class="card-badge"><i class="fas fa-shield-alt"></i> CORE DIRECTIVES &bull; 03 PROTOCOLS</div>
+
+          <div class="directives-pod-deck">
+            <!-- Directive Pod 01 -->
+            <div class="directive-pod">
+              <div class="directive-pod-icon cyan">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <div class="directive-pod-content">
+                <div class="pod-header">
+                  <strong>Full Stack Mastery</strong>
+                  <span class="pod-telemetry-tag">REACT &bull; NODE &bull; SQL</span>
+                </div>
+                <p>End-to-end architectures connecting fluid, component-driven UIs with optimized RESTful APIs and structured databases.</p>
+              </div>
+            </div>
+
+            <!-- Directive Pod 02 -->
+            <div class="directive-pod">
+              <div class="directive-pod-icon purple">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <div class="directive-pod-content">
+                <div class="pod-header">
+                  <strong>Performance &amp; Speed</strong>
+                  <span class="pod-telemetry-tag">SUB-MS &bull; ZERO JANK</span>
+                </div>
+                <p>Zero-lag interaction feedback, sub-millisecond DOM rendering, responsive layouts, and clean modular code design.</p>
+              </div>
+            </div>
+
+            <!-- Directive Pod 03 -->
+            <div class="directive-pod">
+              <div class="directive-pod-icon green">
+                <i class="fas fa-bolt-lightning"></i>
+              </div>
+              <div class="directive-pod-content">
+                <div class="pod-header">
+                  <strong>Fast Learning &amp; Tech Adaptability</strong>
+                  <span class="pod-telemetry-tag">AGILE &bull; CONTINUOUS</span>
+                </div>
+                <p>High learning agility with proven capability to rapidly master emerging engineering frameworks and adapt to new technology stacks.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 3: Orbital Telemetry Dashboard -->
+        <div class="dossier-card dossier-vitals">
+          <div class="card-glow"></div>
+          <div class="card-corner-bracket corner-tl"></div>
+          <div class="card-corner-bracket corner-tr"></div>
+          <div class="card-corner-bracket corner-bl"></div>
+          <div class="card-corner-bracket corner-br"></div>
+
+          <div class="vitals-hud-topbar">
+            <div class="card-badge"><i class="fas fa-satellite"></i> TELEMETRY VITALS</div>
+            <div class="vitals-scan-hud">
+              <span class="vitals-live-radar"></span>
+              <span class="vitals-live-txt">ORBIT ACTIVE</span>
+            </div>
+          </div>
+
+          <div class="vitals-dashboard-grid">
+            <div class="vital-pod">
+              <div class="vital-pod-icon cyan"><i class="fas fa-satellite-dish"></i></div>
+              <div class="vital-pod-data">
+                <span class="vital-k">BASE ORBIT</span>
+                <span class="vital-v">Hyderabad, India</span>
+                <span class="vital-meta">IST (UTC+5:30) &bull; 17.38° N</span>
+              </div>
+            </div>
+
+            <div class="vital-pod active-mission">
+              <div class="vital-pod-icon green"><i class="fas fa-briefcase"></i></div>
+              <div class="vital-pod-data">
+                <span class="vital-k">CURRENT MISSION</span>
+                <span class="vital-v highlight-green">Edvak EHR</span>
+                <span class="vital-meta-active"><span class="pulse-dot-green"></span> Software Engineer Intern</span>
+              </div>
+            </div>
+
+            <div class="vital-pod">
+              <div class="vital-pod-icon purple"><i class="fas fa-microchip"></i></div>
+              <div class="vital-pod-data">
+                <span class="vital-k">PRIMARY CORE</span>
+                <span class="vital-v">MERN Stack &amp; Python</span>
+                <span class="vital-meta">React &bull; Node &bull; Express &bull; SQL</span>
+              </div>
+            </div>
+
+            <div class="vital-pod">
+              <div class="vital-pod-icon gold"><i class="fas fa-shield-halved"></i></div>
+              <div class="vital-pod-data">
+                <span class="vital-k">AVIONICS HEALTH</span>
+                <span class="vital-v highlight-cyan">100% OPERATIONAL</span>
+                <div class="vitals-health-gauge">
+                  <div class="health-gauge-bar"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
+    <!-- ✦ 1. FLIGHT TRAJECTORY: EDUCATION & CHRONOLOGICAL MILESTONES ✦ -->
+    <section id="trajectory" class="trajectory">
+      <div class="section-header">
+        <span class="section-tag">// 01.5 FLIGHT TRAJECTORY</span>
+        <h2>Education &amp; Chronological Milestones</h2>
+        <p class="section-sub">
+          Chronological flight log tracking academic foundations, intensive industry fellowship, and live production deployments.
+        </p>
+      </div>
+
+      <div class="trajectory-timeline">
+        <div class="trajectory-line">
+          <div class="trajectory-laser-beam"></div>
+        </div>
+
+        <!-- Waypoint 01: Academic Foundations -->
+        <!-- Waypoint 01: Academic Foundations -->
+        <div class="timeline-node left">
+          <div class="node-marker">
+            <span class="marker-pulse"></span>
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="node-card">
+            <div class="card-corner-bracket corner-tl"></div>
+            <div class="card-corner-bracket corner-tr"></div>
+            <div class="card-corner-bracket corner-bl"></div>
+            <div class="card-corner-bracket corner-br"></div>
+            <div class="node-header">
+              <span class="node-period">2020 &mdash; 2024</span>
+              <span class="node-badge academic">ACADEMIC FOUNDATIONS</span>
+            </div>
+            <h3 class="node-title">Bachelor of Technology (B.Tech)</h3>
+            <span class="node-institution"><i class="fas fa-university"></i> Computer Science &amp; Engineering</span>
+            <p class="node-desc">
+              Academic foundation in computer science, data structures and algorithms, database management systems, software engineering, and application development principles.
+            </p>
+            <div class="node-tags">
+              <span class="node-tag">Software Engineering</span>
+              <span class="node-tag">Data Structures</span>
+              <span class="node-tag">RDBMS &amp; SQL</span>
+              <span class="node-tag">Algorithm Design</span>
+              <span class="node-tag">OOP's</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Waypoint 02: Full-Stack Fellowship (NxtWave) -->
+        <div class="timeline-node right">
+          <div class="node-marker">
+            <span class="marker-pulse"></span>
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div class="node-card">
+            <div class="card-corner-bracket corner-tl"></div>
+            <div class="card-corner-bracket corner-tr"></div>
+            <div class="card-corner-bracket corner-bl"></div>
+            <div class="card-corner-bracket corner-br"></div>
+            
+            <div class="node-header">
+              <span class="node-period">2023 &mdash; Ongoing</span>
+              <span class="node-badge fellowship">INDUSTRY FELLOWSHIP</span>
+            </div>
+            <h3 class="node-title">Full-Stack Development Trainee</h3>
+            <span class="node-institution"><i class="fas fa-award"></i> NxtWave Disruptive Technologies // CCBP 4.0 Academy</span>
+            <p class="node-desc">
+              A structured software development fellowship focused on programming fundamentals, full-stack development, database management, and modern web technologies.
+            </p>
+            <div class="node-tags">
+              <span class="node-tag">Programming Fundamentals</span>
+              <span class="node-tag">Full-Stack Development</span>
+              <span class="node-tag">Web Technologies</span>
+              <span class="node-tag">Database Fundamentals</span>
+              <span class="node-tag">DSA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Waypoint 03: Industry Experience (Edvak EHR) -->
+        <div class="timeline-node left">
+          <div class="node-marker">
+            <span class="marker-pulse"></span>
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="node-card">
+            <div class="card-corner-bracket corner-tl"></div>
+            <div class="card-corner-bracket corner-tr"></div>
+            <div class="card-corner-bracket corner-bl"></div>
+            <div class="card-corner-bracket corner-br"></div>
+            
+            <div class="node-header">
+              <span class="node-period">2026 &mdash; Ongoing</span>
+              <span class="node-badge deployments">INDUSTRY EXPERIENCE</span>
+            </div>
+            <h3 class="node-title">Software Engineer Intern</h3>
+            <span class="node-institution"><i class="fas fa-briefcase"></i> Edvak EHR</span>
+            <p class="node-desc">
+              Onboarded as a Software Engineer Intern at Edvak, with a focus on EHR systems and full-stack development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section ("Avionics & Modules") -->
     <section id="skills" class="skills">
-      <h2>Skills</h2>
+      <div class="section-header">
+        <span class="section-tag">// 02 AVIONICS &amp; MODULES</span>
+        <h2>Propulsion &amp; Technical Capabilities</h2>
+        <p class="section-sub">Tools, languages, and frameworks powering my digital missions.</p>
+      </div>
+
       <div class="skills-main-container"></div>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects Section ("Deep Space Expeditions") -->
     <section id="projects" class="projects">
-      <h2 class="section-title">Projects</h2>
+      <div class="section-header">
+        <span class="section-tag">// 03 EXPEDITIONS</span>
+        <h2>Deployed Orbital Missions</h2>
+        <p class="section-sub">Featured web applications engineered for real-world impact.</p>
+      </div>
 
       <div class="projects-wrapper">
-        <!-- <button class="scroll-btn left-btn" aria-label="Scroll Left">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2.4"
-            stroke="currentColor"
-            class="nav-icon"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button> -->
+        <button class="scroll-btn left-btn rocket-nav-btn" id="projects-left-btn" aria-label="Propel Projects Left">
+          <span class="rocket-thruster-exhaust left-exhaust"></span>
+          <i class="fas fa-rocket rocket-icon-left"></i>
+        </button>
 
         <div class="projects-scroll"></div>
 
-        <!-- <button class="scroll-btn right-btn" aria-label="Scroll Right">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2.4"
-            stroke="currentColor"
-            class="nav-icon"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button> -->
+        <button class="scroll-btn right-btn rocket-nav-btn" id="projects-right-btn" aria-label="Propel Projects Right">
+          <i class="fas fa-rocket rocket-icon-right"></i>
+          <span class="rocket-thruster-exhaust right-exhaust"></span>
+        </button>
       </div>
     </section>
 
-    <!-- Certificates -->
+    <!-- Certificates Section ("Flight Credentials") -->
     <section id="certificates" class="certificates">
-      <h2 class="section-title">Certificates</h2>
+      <div class="section-header">
+        <span class="section-tag">// 04 FLIGHT CREDENTIALS</span>
+        <h2>Verified Competencies &amp; Certifications</h2>
+        <p class="section-sub">Certified mastery in modern software engineering principles.</p>
+
+        <!-- Cockpit Telemetry Dock -->
+        <div class="cert-cockpit-bar">
+          <div class="cert-dock-status">
+            <span class="cert-live-dot"></span>
+            <span class="cert-dock-title">10 ACCREDITED CREDENTIALS</span>
+            <span class="cert-dock-divider">//</span>
+            <span class="cert-dock-sub"><i class="fas fa-shield-alt"></i> NxtWave • NASSCOM Verified</span>
+          </div>
+          <div class="cert-dock-nav">
+            <button class="dock-arrow-btn" id="cert-dock-prev" aria-label="Previous Certificate" title="Previous Credential">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="cert-counter-pod">
+              <span id="cert-counter-current">01</span>
+              <span class="sep">/</span>
+              <span class="total">10</span>
+            </div>
+            <button class="dock-arrow-btn" id="cert-dock-next" aria-label="Next Certificate" title="Next Credential">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
 
       <div class="certificates-wrapper">
-        <button class="scroll-btn left-btn" aria-label="Scroll Left">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2.4"
-            stroke="currentColor"
-            class="nav-icon"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
+        <button class="scroll-btn left-btn rocket-nav-btn" id="certificates-left-btn" aria-label="Propel Certificates Left" title="Propel Left">
+          <span class="rocket-thruster-exhaust left-exhaust"></span>
+          <i class="fas fa-rocket rocket-icon-left"></i>
         </button>
+
         <div class="certificates-container" id="certificates-container"></div>
 
-        <button class="scroll-btn right-btn" aria-label="Scroll Right">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2.4"
-            stroke="currentColor"
-            class="nav-icon"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
+        <button class="scroll-btn right-btn rocket-nav-btn" id="certificates-right-btn" aria-label="Propel Certificates Right" title="Propel Right">
+          <i class="fas fa-rocket rocket-icon-right"></i>
+          <span class="rocket-thruster-exhaust right-exhaust"></span>
         </button>
       </div>
+
+      <!-- Orbital Progress Track -->
+      <div class="cert-progress-track" aria-hidden="true">
+        <div class="cert-progress-fill" id="cert-progress-fill"></div>
+      </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section ("Subspace Uplink") -->
     <section id="contact" class="contact">
-      <h2>Contact Me</h2>
+      <div class="section-header">
+        <span class="section-tag">// 05 SUBSPACE UPLINK</span>
+        <h2>Establish Communications</h2>
+        <p class="section-sub">
+          All transmission frequencies are live and monitored. Initiate an uplink across verified communication channels or dispatch a direct subspace transmission.
+        </p>
 
-      <p class="contact-text">
-        Choose any platform below to get in touch with me. Each card will take
-        you directly to my contact details.
-      </p>
+        <!-- Live Orbital Status Bar -->
+        <div class="comms-status-bar">
+          <div class="comms-status-item">
+            <span class="comms-beacon green"></span>
+            <span class="comms-label">TRANSMISSION STATUS:</span>
+            <span class="comms-val">ACTIVE &bull; READY FOR DISPATCH</span>
+          </div>
+          <div class="comms-status-divider">//</div>
+          <div class="comms-status-item">
+            <i class="fas fa-satellite"></i>
+            <span class="comms-label">STATION:</span>
+            <span class="comms-val">HYDERABAD, INDIA</span>
+          </div>
+          <div class="comms-status-divider">//</div>
+          <div class="comms-status-item">
+            <i class="far fa-clock"></i>
+            <span class="comms-label">MISSION CLOCK:</span>
+            <span class="comms-val" id="mission-clock">--:--:-- IST</span>
+          </div>
+        </div>
+      </div>
 
+      <!-- 4 Orbital Communication Pods -->
       <div class="contact-boxes">
-        <!-- LinkedIn -->
-        <a
-          href="https://www.linkedin.com/in/sriram-harshit/"
-          target="_blank"
-          class="contact-card"
-        >
-          <i class="fab fa-linkedin-in"></i>
-          <h3>LinkedIn</h3>
-          <p>Connect with me</p>
-        </a>
+        <!-- 1. LinkedIn Uplink -->
+        <div class="contact-card theme-cyan">
+          <div class="card-corner-bracket corner-tl"></div>
+          <div class="card-corner-bracket corner-tr"></div>
+          <div class="card-corner-bracket corner-bl"></div>
+          <div class="card-corner-bracket corner-br"></div>
+          <div class="card-glow"></div>
 
-        <!-- Gmail -->
-        <a href="mailto:sriramharshit4859@gmail.com" class="contact-card">
-          <i class="fas fa-envelope"></i>
-          <h3>Email</h3>
-          <p>sriramharshit4859@gmail.com</p>
-        </a>
+          <div class="card-header-bar">
+            <div class="signal-gauge" title="Signal Strength: 100%">
+              <span class="gauge-bar active"></span>
+              <span class="gauge-bar active"></span>
+              <span class="gauge-bar active"></span>
+              <span class="gauge-bar active"></span>
+              <span class="gauge-bar active"></span>
+            </div>
+            <span class="card-channel-tag">CHANNEL // 01</span>
+          </div>
 
-        <!-- Phone -->
-        <a href="tel:+919573601488" class="contact-card">
-          <i class="fas fa-phone-alt"></i>
-          <h3>Phone</h3>
-          <p>+91 95736 01488</p>
-        </a>
+          <div class="card-icon-wrap">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+
+          <div class="card-body">
+            <span class="card-subtag">PROFESSIONAL NETWORK</span>
+            <h3>LinkedIn Uplink</h3>
+            <p class="card-detail">Professional dossier, endorsements, and verified technical milestones.</p>
+            <div class="card-handle-pill">
+              <i class="fab fa-linkedin"></i>
+              <span>in/sriram-harshit</span>
+            </div>
+          </div>
+
+          <div class="card-footer-actions">
+            <a
+              href="https://www.linkedin.com/in/sriram-harshit/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-primary-btn"
+            >
+              <span>Connect on LinkedIn</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Secure Email Transmission -->
+        <div class="contact-card theme-rose">
+          <div class="card-corner-bracket corner-tl"></div>
+          <div class="card-corner-bracket corner-tr"></div>
+          <div class="card-corner-bracket corner-bl"></div>
+          <div class="card-corner-bracket corner-br"></div>
+          <div class="card-glow"></div>
+
+          <div class="card-header-bar">
+            <div class="signal-gauge" title="Signal Strength: 100%">
+              <span class="gauge-bar active"></span>
+              <span class="gauge-bar active"></span>
+              <span class="gauge-bar active"></span>
+              <span class="gauge-bar active"></span>
+              <span class="gauge-bar active"></span>
+            </div>
+            <span class="card-channel-tag">CHANNEL // 02</span>
+          </div>
+
+          <div class="card-icon-wrap">
+            <i class="fas fa-envelope-open-text"></i>
+          </div>
+
+          <div class="card-body">
+            <span class="card-subtag">DIRECT TRANSMISSION</span>
+            <h3>Direct Comms (Email)</h3>
+            <p class="card-detail">Immediate priority inbox transmission with rapid response turnaround.</p>
+            <div class="card-handle-pill">
+              <i class="fas fa-at"></i>
+              <span>sriramharshit4859@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="card-footer-actions dual">
+            <a href="mailto:sriramharshit4859@gmail.com" class="contact-primary-btn">
+              <span>Transmit Email</span>
+              <i class="fas fa-paper-plane"></i>
+            </a>
+            <button
+              type="button"
+              class="contact-copy-btn"
+              id="copy-email-btn"
+              data-copy="sriramharshit4859@gmail.com"
+              title="Copy email address"
+              aria-label="Copy email address"
+            >
+              <i class="far fa-copy"></i>
+              <span class="btn-text">Copy</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. GitHub Mission Log -->
+        <div class="contact-card theme-purple">
+          <div class="card-corner-bracket corner-tl"></div>
+          <div class="card-corner-bracket corner-tr"></div>
+          <div class="card-corner-bracket corner-bl"></div>
+          <div class="card-corner-bracket corner-br"></div>
+          <div class="card-glow"></div>
+
+          <div class="card-header-bar">
+            <div class="signal-gauge" title="Signal Strength: 100%">
+              <span class="gauge-bar active"></span>
+              <span class="gauge-bar active"></span>
+              <span class="gauge-bar active"></span>
+              <span class="gauge-bar active"></span>
+              <span class="gauge-bar active"></span>
+            </div>
+            <span class="card-channel-tag">CHANNEL // 03</span>
+          </div>
+
+          <div class="card-icon-wrap">
+            <i class="fab fa-github"></i>
+          </div>
+
+          <div class="card-body">
+            <span class="card-subtag">OPEN REPOSITORY</span>
+            <h3>GitHub Coordinates</h3>
+            <p class="card-detail">Explore open-source mission architecture, commit history, and web apps.</p>
+            <div class="card-handle-pill">
+              <i class="fab fa-github"></i>
+              <span>@Sriram-Harshit</span>
+            </div>
+          </div>
+
+          <div class="card-footer-actions">
+            <a
+              href="https://github.com/Sriram-Harshit"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-primary-btn"
+            >
+              <span>Explore Codebase</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subspace Transmission Dispatch Terminal (Direct Interactive Form) -->
+      <div class="transmission-console">
+        <div class="card-corner-bracket corner-tl"></div>
+        <div class="card-corner-bracket corner-tr"></div>
+        <div class="card-corner-bracket corner-bl"></div>
+        <div class="card-corner-bracket corner-br"></div>
+        <div class="console-top-accent"></div>
+
+        <div class="console-header">
+          <div class="console-title-wrap">
+            <span class="console-tag">// DIRECT SUBSPACE TRANSMISSION</span>
+            <h3>Dispatch Encrypted Payload</h3>
+            <p>Draft an instant mission transmission dispatched directly to my inbox.</p>
+          </div>
+          <div class="console-telemetry-badge">
+            <span class="signal-dot"></span>
+            <span>UPLINK: SECURE &bull; SHA-256</span>
+          </div>
+        </div>
+
+        <form id="transmission-form" class="console-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="comm-sender-name">
+                <i class="fas fa-user-astronaut"></i>
+                <span>CALLSIGN / SENDER IDENTIFIER</span>
+              </label>
+              <input
+                type="text"
+                id="comm-sender-name"
+                name="senderName"
+                placeholder="e.g. Commander Sarah / Engineering Lead"
+                required
+                autocomplete="name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="comm-sender-email">
+                <i class="fas fa-satellite"></i>
+                <span>RETURN FREQUENCY (EMAIL)</span>
+              </label>
+              <input
+                type="email"
+                id="comm-sender-email"
+                name="senderEmail"
+                placeholder="e.g. your.email@company.com"
+                required
+                autocomplete="email"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="comm-message">
+              <i class="fas fa-terminal"></i>
+              <span>TRANSMISSION PAYLOAD (MESSAGE)</span>
+            </label>
+            <textarea
+              id="comm-message"
+              name="message"
+              rows="4"
+              placeholder="Transmit your mission proposal, role opportunity, or greetings to orbit..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-actions">
+            <div class="transmission-status-msg" id="transmission-status-msg" aria-live="polite"></div>
+            <button type="submit" class="transmit-submit-btn" id="transmit-btn">
+              <span class="btn-glow"></span>
+              <i class="fas fa-paper-plane"></i>
+              <span>TRANSMIT DISPATCH TO ORBIT</span>
+            </button>
+          </div>
+        </form>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Cockpit Footer: Mission Control Dock -->
     <footer class="footer">
-      <div class="footer-links">
-        <a href="mailto:youremail@example.com">Email</a>
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank"
-          >LinkedIn</a
-        >
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <div class="footer-waypoint-bar">
+        <div class="waypoint-line"></div>
+        <div class="footer-orb">
+          <span class="orb-ring"></span>
+          <i class="fas fa-satellite-dish"></i>
+          <span class="orb-title">MISSION CONTROL // HYDERABAD ORBIT</span>
+        </div>
+        <div class="waypoint-line"></div>
       </div>
-      <p>© 2025 Sri Ram Harshit — Crafted with ❤️ and clean code.</p>
+
+      <div class="footer-container">
+        <!-- Col 1: Mission Command Info -->
+        <div class="footer-col col-brand">
+          <div class="footer-brand">
+            <span class="logo-symbol">✦</span>
+            <span class="brand-text">SRI RAM <span class="accent">// HARSHIT</span></span>
+          </div>
+          <p class="footer-bio">
+            Full-Stack Software Engineer &amp; Celestial Systems Architect. Engineering scalable, resilient web applications with modern JavaScript, React, Node.js, and SQL.
+          </p>
+          <div class="footer-status-pill">
+            <span class="status-pulse-dot"></span>
+            <span>SYSTEMS NOMINAL // AVAILABLE FOR MISSIONS</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Orbital Trajectory Navigation -->
+        <div class="footer-col col-nav">
+          <h4 class="footer-col-title">// FLIGHT TRAJECTORY</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home"><span class="nav-num">00</span> Home Base</a></li>
+            <li><a href="#about"><span class="nav-num">01</span> Astronaut Dossier</a></li>
+            <li><a href="#skills"><span class="nav-num">02</span> Avionics &amp; Skills</a></li>
+            <li><a href="#projects"><span class="nav-num">03</span> Expeditions</a></li>
+            <li><a href="#certificates"><span class="nav-num">04</span> Credentials</a></li>
+            <li><a href="#contact"><span class="nav-num">05</span> Subspace Uplink</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Frequencies & Blast Off -->
+        <div class="footer-col col-actions">
+          <h4 class="footer-col-title">// DIRECT CHANNELS</h4>
+          <div class="footer-social-chips">
+            <a
+              href="https://www.linkedin.com/in/sriram-harshit/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-chip"
+              title="LinkedIn Profile"
+            >
+              <i class="fab fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a
+              href="https://github.com/Sriram-Harshit"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-chip"
+              title="GitHub Codebase"
+            >
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a
+              href="mailto:sriramharshit4859@gmail.com"
+              class="social-chip"
+              title="Direct Email"
+            >
+              <i class="fas fa-envelope"></i>
+              <span>Email</span>
+            </a>
+          </div>
+
+          <!-- Blast Off To Top Rocket Button -->
+          <button class="blast-off-btn" id="blast-off-btn" title="Blast off to top of orbit" aria-label="Blast off to top">
+            <span class="blast-glow"></span>
+            <i class="fas fa-rocket blast-rocket-icon"></i>
+            <span>BLAST OFF TO TOP</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bottom Diagnostics & Copyright Strip -->
+      <div class="footer-bottom-deck">
+        <div class="footer-diagnostics">
+          <span class="diag-item"><i class="fas fa-shield-alt"></i> ENCRYPTION: SHA-256</span>
+          <span class="diag-sep">&bull;</span>
+          <span class="diag-item"><i class="fas fa-wifi"></i> TELEMETRY: 100% ONLINE</span>
+          <span class="diag-sep">&bull;</span>
+          <span class="diag-item"><i class="fas fa-globe-asia"></i> STATION: HYDERABAD, INDIA</span>
+        </div>
+        <p class="footer-copy">
+          &copy; 2026 Sri Ram Harshit &bull; Engineered with celestial passion and clean code architecture.
+        </p>
+      </div>
     </footer>
+
+    <!-- Cosmic Certificate Lightbox Modal -->
+    <div id="cert-lightbox-modal" class="cert-modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="cert-modal-backdrop" id="cert-modal-backdrop"></div>
+      <div class="cert-modal-dialog">
+        <div class="cert-modal-card">
+          <div class="card-corner-bracket corner-tl"></div>
+          <div class="card-corner-bracket corner-tr"></div>
+          <div class="card-corner-bracket corner-bl"></div>
+          <div class="card-corner-bracket corner-br"></div>
+
+          <div class="cert-modal-header">
+            <div class="cert-modal-info">
+              <span class="cert-modal-eyebrow">// AUTHENTICATED FLIGHT CREDENTIAL</span>
+              <h3 id="modal-cert-title" class="cert-modal-title">React JS</h3>
+              <div class="cert-modal-badges">
+                <span class="cert-badge-pill verified"><i class="fas fa-check-circle"></i> VERIFIED ACCREDITATION</span>
+                <span class="cert-badge-pill issuer" id="modal-cert-issuer"><i class="fas fa-shield-alt"></i> NxtWave • NASSCOM Accredited</span>
+                <span class="cert-badge-pill domain" id="modal-cert-domain">REACT // UI</span>
+              </div>
+            </div>
+
+            <div class="cert-modal-actions">
+              <button id="modal-prev-btn" class="modal-circle-btn" aria-label="Previous Certificate" title="Previous (Left Arrow)">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <span id="modal-counter-badge" class="modal-counter-badge">01 / 10</span>
+              <button id="modal-next-btn" class="modal-circle-btn" aria-label="Next Certificate" title="Next (Right Arrow)">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+              <a id="modal-external-link" href="#" target="_blank" rel="noopener noreferrer" class="modal-circle-btn external" title="Open Original High-Res">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <button id="modal-close-btn" class="modal-circle-btn close" aria-label="Close Lightbox" title="Close (Esc)">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="cert-modal-view">
+            <div class="cert-modal-img-wrap">
+              <div class="cert-modal-hud-scanline"></div>
+              <img id="modal-cert-img" src="" alt="Certificate Full Document" />
+            </div>
+          </div>
+
+          <div class="cert-modal-footer">
+            <div class="cert-modal-tip">
+              <i class="fas fa-keyboard"></i>
+              <span>Use <strong>&larr;</strong> and <strong>&rarr;</strong> arrows to cycle certificates &bull; Press <strong>ESC</strong> to close</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✦ 2. FLIGHT DOSSIER (RESUME) VIEWER MODAL ✦ -->
+    <div id="dossier-viewer-modal" class="cert-modal dossier-modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="cert-modal-backdrop" id="dossier-modal-backdrop"></div>
+      <div class="cert-modal-dialog dossier-dialog dossier-modal-dialog">
+        <div class="cert-modal-card dossier-card-modal dossier-modal-frame">
+          <div class="card-corner-bracket corner-tl"></div>
+          <div class="card-corner-bracket corner-tr"></div>
+          <div class="card-corner-bracket corner-bl"></div>
+          <div class="card-corner-bracket corner-br"></div>
+
+          <div class="cert-modal-header">
+            <div class="cert-modal-info">
+              <span class="cert-modal-eyebrow">// OFFICIAL FLIGHT DOSSIER</span>
+              <h3 class="cert-modal-title">Sri Ram Harshit &bull; Curriculum Vitae</h3>
+              <div class="cert-modal-badges">
+                <span class="cert-badge-pill verified"><i class="fas fa-check-circle"></i> VERIFIED CANDIDATE</span>
+                <span class="cert-badge-pill domain">FULL STACK DEVELOPER</span>
+                <span class="cert-badge-pill issuer"><i class="fas fa-map-marker-alt"></i> HYDERABAD, INDIA</span>
+              </div>
+            </div>
+
+            <div class="cert-modal-actions">
+              <a href="mailto:sriramharshit4859@gmail.com?subject=Interview%20Invitation%20for%20Sri%20Ram%20Harshit" class="modal-circle-btn external" title="Transmit Interview Invitation">
+                <i class="fas fa-paper-plane"></i>
+              </a>
+              <button id="dossier-print-btn" class="modal-circle-btn" title="Print / Save Flight Dossier" aria-label="Print Dossier">
+                <i class="fas fa-print"></i>
+              </button>
+              <button id="dossier-close-btn" class="modal-circle-btn close" aria-label="Close Dossier" title="Close (Esc)">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="dossier-view-body dossier-modal-body" id="dossier-printable-area" tabindex="0" aria-label="Resume Document Scrollable Area">
+            <!-- Digital Resume Document -->
+            <div class="cv-document">
+              <!-- CV Header -->
+              <div class="cv-header">
+                <div>
+                  <h1 class="cv-name">SRI RAM HARSHIT</h1>
+                  <h2 class="cv-headline">Full-Stack Software Engineer &amp; Web Architect</h2>
+                </div>
+                <div class="cv-contact-strip">
+                  <span><i class="fas fa-envelope"></i> sriramharshit4859@gmail.com</span>
+                  <span><i class="fab fa-linkedin"></i> linkedin.com/in/sriram-harshit</span>
+                  <span><i class="fab fa-github"></i> github.com/Sriram-Harshit</span>
+                  <span><i class="fas fa-map-marker-alt"></i> Hyderabad, India</span>
+                </div>
+              </div>
+
+              <!-- CV Summary -->
+              <div class="cv-section">
+                <h3 class="cv-sec-title"><i class="fas fa-user-astronaut"></i> PROFESSIONAL SUMMARY</h3>
+                <p class="cv-summary-text">
+                  Results-driven Full Stack Engineer with deep expertise in modern JavaScript, React.js, Node.js, Express, and SQL database architecture. Certified across 10 specialized software engineering competencies accredited by NxtWave and NASSCOM. Adept at building high-performance, modular web applications with clean architecture and fluid user experiences.
+                </p>
+              </div>
+
+              <!-- CV Technical Avionics -->
+              <div class="cv-section">
+                <h3 class="cv-sec-title"><i class="fas fa-microchip"></i> TECHNICAL AVIONICS</h3>
+                <div class="cv-skills-grid">
+                  <div class="cv-skill-item">
+                    <strong>Languages:</strong> JavaScript (ES6+), Python, SQL (Relational/CRUD)
+                  </div>
+                  <div class="cv-skill-item">
+                    <strong>Frontend:</strong> React.js, Component Trees, HTML5, CSS3, Flexbox Grid, DOM
+                  </div>
+                  <div class="cv-skill-item">
+                    <strong>Backend &amp; Databases:</strong> Node.js, Express.js, SQL Databases (RDBMS), MongoDB
+                  </div>
+                  <div class="cv-skill-item">
+                    <strong>Tools &amp; Ecosystem:</strong> Git, GitHub, RESTful APIs, NPM Packages, Chrome DevTools, Vercel
+                  </div>
+                </div>
+              </div>
+
+              <!-- CV Industry Experience -->
+              <div class="cv-section">
+                <h3 class="cv-sec-title"><i class="fas fa-briefcase"></i> INDUSTRY EXPERIENCE</h3>
+                <div class="cv-timeline-entry">
+                  <div class="entry-head">
+                    <span class="entry-title">Software Engineer Intern</span>
+                    <span class="entry-date">2026 &mdash; Ongoing</span>
+                  </div>
+                  <div class="entry-sub">Edvak EHR</div>
+                  <p class="entry-desc">
+                    Onboarded as a Software Engineer Intern at Edvak, focusing on EHR systems, full-stack development, and modern web application architecture.
+                  </p>
+                </div>
+              </div>
+
+              <!-- CV Education & Fellowship -->
+              <div class="cv-section">
+                <h3 class="cv-sec-title"><i class="fas fa-graduation-cap"></i> EDUCATION &amp; TRAINING</h3>
+                <div class="cv-timeline-entry">
+                  <div class="entry-head">
+                    <span class="entry-title">Full-Stack Development Trainee</span>
+                    <span class="entry-date">2023 &mdash; Ongoing</span>
+                  </div>
+                  <div class="entry-sub">NxtWave Disruptive Technologies // CCBP 4.0 Academy</div>
+                  <p class="entry-desc">
+                    A structured software development fellowship focused on programming fundamentals, full-stack development, database management, and modern web technologies. Earned 10 verified competencies.
+                  </p>
+                </div>
+                <div class="cv-timeline-entry">
+                  <div class="entry-head">
+                    <span class="entry-title">Bachelor of Technology (B.Tech)</span>
+                    <span class="entry-date">2020 &mdash; 2024</span>
+                  </div>
+                  <div class="entry-sub">Computer Science &amp; Engineering</div>
+                  <p class="entry-desc">
+                    Academic foundation in computer science, data structures and algorithms, database management systems, software engineering, and application development principles.
+                  </p>
+                </div>
+              </div>
+
+              <!-- CV Projects -->
+              <div class="cv-section">
+                <h3 class="cv-sec-title"><i class="fas fa-rocket"></i> FEATURED EXPEDITIONS</h3>
+                <div class="cv-timeline-entry">
+                  <div class="entry-head">
+                    <span class="entry-title">TheStore &bull; MERN E-Commerce Platform</span>
+                    <span class="entry-links"><a href="https://the-store-full-stack.vercel.app/" target="_blank">Live Demo ↗</a></span>
+                  </div>
+                  <p class="entry-desc">
+                    Architected a full-featured MERN e-commerce application with dynamic catalog filtering, cart state persistence, responsive checkout flow, and custom REST API communication.
+                  </p>
+                </div>
+                <div class="cv-timeline-entry">
+                  <div class="entry-head">
+                    <span class="entry-title">Cosmic Memory Matrix &bull; Interactive Gaming Protocol</span>
+                    <span class="entry-links"><a href="https://github.com/Sriram-Harshit/memory-game" target="_blank">Codebase ↗</a></span>
+                  </div>
+                  <p class="entry-desc">
+                    Built a high-performance card matching memory application implementing algorithmic state shuffling, real-time move telemetry, streak counters, and fluid CSS animations.
+                  </p>
+                </div>
+                <div class="cv-timeline-entry">
+                  <div class="entry-head">
+                    <span class="entry-title">Digital Health Wallet &bull; Biometric Records Vault</span>
+                    <span class="entry-links"><a href="https://digital-health-wallet-theta.vercel.app/" target="_blank">Live Demo ↗</a></span>
+                  </div>
+                  <p class="entry-desc">
+                    Developed a secure health management portal featuring structured medical dossier management, instant emergency telemetry, and responsive patient vitals visualization.
+                  </p>
+                </div>
+              </div>
+
+              <!-- CV Certifications -->
+              <div class="cv-section">
+                <h3 class="cv-sec-title"><i class="fas fa-certificate"></i> FLIGHT CREDENTIALS (10 VERIFIED)</h3>
+                <p class="cv-certs-line">
+                  React JS &bull; Node.js &bull; JavaScript Essentials &bull; Build Dynamic Web Apps &bull; Responsive Design (Flexbox) &bull; Responsive Websites &bull; Static Websites &bull; Introduction to Databases (SQL) &bull; Programming with Python &bull; Developer Foundations (Git/CLI)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-modal-footer">
+            <div class="dossier-footer-actions">
+              <span class="modal-keyboard-tip"><i class="fas fa-info-circle"></i> Use the Print button to save as PDF &bull; Press <strong>ESC</strong> to close</span>
+              <a href="mailto:sriramharshit4859@gmail.com?subject=Job%20Opportunity%20for%20Sri%20Ram%20Harshit" class="dossier-hire-btn">
+                <i class="fas fa-handshake"></i>
+                <span>Invite to Interview</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✦ 3. FLOATING COSMIC CLI TERMINAL LAUNCHER ✦ -->
+    <button class="terminal-launcher-btn" id="terminal-launcher-btn" aria-label="Toggle Cosmic Developer CLI" title="Open Interactive Developer Terminal (Press ~ or Ctrl+K)">
+      <span class="terminal-radar-pulse"></span>
+      <i class="fas fa-terminal"></i>
+      <span class="terminal-label">CLI TERMINAL</span>
+      <span class="terminal-badge">~</span>
+    </button>
+
+    <!-- ✦ COSMIC CLI TERMINAL DRAWER MODAL ✦ -->
+    <div id="cosmic-cli-modal" class="terminal-modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="terminal-modal-backdrop" id="terminal-modal-backdrop"></div>
+      <div class="terminal-modal-dialog">
+        <div class="terminal-frame">
+          <!-- Terminal Titlebar -->
+          <div class="terminal-titlebar">
+            <div class="terminal-controls">
+              <button class="win-btn close" id="terminal-close-btn" title="Close Terminal (Esc)"></button>
+              <button class="win-btn minimize" id="terminal-min-btn" title="Minimize Terminal"></button>
+              <button class="win-btn maximize" id="terminal-max-btn" title="Toggle Fullscreen"></button>
+            </div>
+            <div class="terminal-title">
+              <i class="fas fa-space-shuttle"></i>
+              <span>sriram@celestial-orbital-command: ~ (zsh / bash)</span>
+            </div>
+            <div class="terminal-meta-tag">ONLINE // PORT 5500</div>
+          </div>
+
+          <!-- Terminal Output Screen -->
+          <div class="terminal-screen" id="terminal-screen">
+            <div class="terminal-welcome">
+              <pre class="terminal-ascii-art">
+   ____ _____  ___ ____  _   __  __ 
+  / ___|  _ \|_ _|  _ \ / \ |  \/  |
+  \___ \ |_) || || |_) / _ \| |\/| |
+   ___) |  _ < | ||  __/ ___ \ |  | |
+  |____/|_| \_\___|_| /_/   \_\_|  |_|
+  CELESTIAL ORBITAL COMMAND // SYSTEM v2.6.4
+              </pre>
+              <p class="term-greeting">Welcome, guest_astronaut@earth. All flight telemetry operational.</p>
+              <p class="term-instruction">Type <span class="term-cmd-highlight">help</span> to view available system commands, or try <span class="term-cmd-highlight">sudo hire</span>.</p>
+            </div>
+            <div id="terminal-history"></div>
+
+            <!-- Terminal Interactive Input Prompt -->
+            <div class="terminal-input-row">
+              <span class="terminal-prompt">sriram@orbit:~$</span>
+              <input type="text" id="terminal-cli-input" class="terminal-cli-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus />
+            </div>
+          </div>
+
+          <!-- Terminal Quick Action Command Bar -->
+          <div class="terminal-quickbar">
+            <span class="quickbar-label">QUICK TELEMETRY:</span>
+            <button class="quick-cmd-btn" data-cmd="help">help</button>
+            <button class="quick-cmd-btn" data-cmd="trajectory">trajectory</button>
+            <button class="quick-cmd-btn" data-cmd="skills">skills</button>
+            <button class="quick-cmd-btn" data-cmd="projects">projects</button>
+            <button class="quick-cmd-btn" data-cmd="certs">certs</button>
+            <button class="quick-cmd-btn" data-cmd="contact">contact</button>
+            <button class="quick-cmd-btn" data-cmd="sudo hire">sudo hire</button>
+            <button class="quick-cmd-btn" data-cmd="clear">clear</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full-Height Edge Rocket Scrollbar (Replaces standard browser scrollbar) -->
+    <aside class="rocket-scrollbar" id="rocket-scrollbar" aria-label="Rocket Scrollbar">
+      <!-- Trajectory flight line running the full height of the viewport -->
+      <div class="rocket-track" id="rocket-track">
+        <div class="track-trail" id="track-trail"></div>
+        <span class="waypoint" style="top: 2%;" title="00 Home"></span>
+        <span class="waypoint" style="top: 20%;" title="01 Dossier"></span>
+        <span class="waypoint" style="top: 40%;" title="02 Avionics"></span>
+        <span class="waypoint" style="top: 60%;" title="03 Expeditions"></span>
+        <span class="waypoint" style="top: 80%;" title="04 Credentials"></span>
+        <span class="waypoint" style="top: 98%;" title="05 Uplink"></span>
+      </div>
+
+      <!-- The Rocket that travels down the entire right edge as you scroll -->
+      <div
+        class="rocket-thumb"
+        id="rocket-thumb"
+        title="Drag rocket to scroll, or click to blast off to top"
+        tabindex="0"
+        role="scrollbar"
+        aria-valuenow="0"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <!-- Telemetry Tooltip -->
+        <div class="rocket-telemetry-tag" id="rocket-telemetry-tag">
+          <span class="tag-percent">0%</span>
+          <span class="tag-sector">HOME</span>
+        </div>
+
+        <!-- Rocket Visual Body & Exhaust -->
+        <div class="rocket-vehicle">
+          <div class="ion-thruster">
+            <span class="ion-core"></span>
+            <span class="ion-glow"></span>
+          </div>
+          <i class="fas fa-rocket rocket-ship-icon"></i>
+        </div>
+      </div>
+    </aside>
   </body>
 </html>
