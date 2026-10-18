@@ -1616,33 +1616,43 @@ section {
 .projects-wrapper {
   position: relative;
   width: 100%;
+  padding: 0 65px;
+  margin-top: 24px;
+}
+
+.projects-wrapper .scroll-btn.left-btn {
+  left: 0;
+}
+
+.projects-wrapper .scroll-btn.right-btn {
+  right: 0;
 }
 
 .projects-scroll {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
   gap: 26px;
   width: 100%;
+  padding: 24px 6px 30px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
-@media (max-width: 1024px) {
-  .projects-scroll {
-    display: flex;
-    overflow-x: auto;
-    gap: 22px;
-    padding: 10px 4px;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
-  }
-
-  .projects-scroll::-webkit-scrollbar {
-    display: none;
-  }
+.projects-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 .project-card {
   position: relative;
+  flex: 0 0 380px;
+  width: 380px;
+  max-width: 85vw;
+  scroll-snap-align: start;
   background: linear-gradient(135deg, rgba(13, 17, 35, 0.85) 0%, rgba(6, 9, 20, 0.94) 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 22px;
@@ -1656,10 +1666,20 @@ section {
               box-shadow 0.4s ease;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+  .projects-wrapper {
+    padding: 0 10px;
+  }
+  .projects-wrapper .scroll-btn {
+    display: none !important;
+  }
+  .projects-scroll {
+    gap: 18px;
+    padding: 16px 4px 22px;
+  }
   .project-card {
-    flex: 0 0 340px;
-    scroll-snap-align: start;
+    flex: 0 0 320px;
+    width: 320px;
   }
 }
 
@@ -2189,12 +2209,7 @@ section {
   transform: translateY(-2px);
 }
 
-/* Hide overlapping carousel arrows on desktop where grid displays all 3 */
-@media (min-width: 1025px) {
-  .projects-wrapper .scroll-btn {
-    display: none !important;
-  }
-}
+
 
 /* Carousel Scroll Buttons */
 .scroll-btn {

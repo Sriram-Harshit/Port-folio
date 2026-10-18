@@ -1254,7 +1254,8 @@ function setupHorizontalScroll(
   scrollContainerSelector,
   leftBtnSelector,
   rightBtnSelector,
-  scrollStep = 380
+  scrollStep = 406,
+  progressFillSelector = null
 ) {
   const wrapper = document.querySelector(wrapperSelector);
   if (!wrapper) return;
@@ -1265,6 +1266,31 @@ function setupHorizontalScroll(
 
   if (!scrollContainer || !leftBtn || !rightBtn) return;
 
+  const updateControls = () => {
+    const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+    if (maxScroll <= 0) {
+      leftBtn.style.opacity = "0.35";
+      leftBtn.style.pointerEvents = "none";
+      rightBtn.style.opacity = "0.35";
+      rightBtn.style.pointerEvents = "none";
+      return;
+    }
+
+    const currentScroll = scrollContainer.scrollLeft;
+    leftBtn.style.opacity = currentScroll <= 6 ? "0.35" : "1";
+    leftBtn.style.pointerEvents = currentScroll <= 6 ? "none" : "auto";
+    rightBtn.style.opacity = currentScroll >= maxScroll - 6 ? "0.35" : "1";
+    rightBtn.style.pointerEvents = currentScroll >= maxScroll - 6 ? "none" : "auto";
+
+    if (progressFillSelector) {
+      const progressFill = document.querySelector(progressFillSelector);
+      if (progressFill) {
+        const pct = Math.min(100, Math.max(12, (currentScroll / maxScroll) * 100));
+        progressFill.style.width = `${pct}%`;
+      }
+    }
+  };
+
   leftBtn.addEventListener("click", () => {
     scrollContainer.scrollBy({ left: -scrollStep, behavior: "smooth" });
   });
@@ -1272,6 +1298,30 @@ function setupHorizontalScroll(
   rightBtn.addEventListener("click", () => {
     scrollContainer.scrollBy({ left: scrollStep, behavior: "smooth" });
   });
+
+  // Smooth mouse-wheel side-scrolling when hovering over the carousel
+  scrollContainer.addEventListener(
+    "wheel",
+    (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+        if (maxScroll > 0) {
+          if (
+            (e.deltaY < 0 && scrollContainer.scrollLeft > 0) ||
+            (e.deltaY > 0 && scrollContainer.scrollLeft < maxScroll)
+          ) {
+            e.preventDefault();
+            scrollContainer.scrollBy({ left: e.deltaY * 0.9, behavior: "auto" });
+          }
+        }
+      }
+    },
+    { passive: false }
+  );
+
+  scrollContainer.addEventListener("scroll", updateControls, { passive: true });
+  window.addEventListener("resize", updateControls, { passive: true });
+  setTimeout(updateControls, 120);
 }
 
 // ==========================================
@@ -1444,7 +1494,8 @@ setupHorizontalScroll(
   ".projects-scroll",
   "#projects-left-btn",
   "#projects-right-btn",
-  380
+  406,
+  "#project-progress-fill"
 );
 
 // ==========================================
