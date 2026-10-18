@@ -2244,6 +2244,7 @@ function processCommand(rawCmd) {
       response = `
         <div class="term-help-grid">
           <div><span class="cmd-name">help</span> &bull; Display all flight commands</div>
+          <div><span class="cmd-name">resume</span> &bull; Open interactive dossier & download CV</div>
           <div><span class="cmd-name">trajectory</span> &bull; Career milestones & flight timeline</div>
           <div><span class="cmd-name">skills</span> &bull; Output avionics & technical capabilities</div>
           <div><span class="cmd-name">projects</span> &bull; Inspect deep space expeditions</div>
@@ -2254,6 +2255,24 @@ function processCommand(rawCmd) {
           <div><span class="cmd-name">sudo hire</span> &bull; Authorize engineering recruitment protocol</div>
           <div><span class="cmd-name">clear</span> &bull; Wipe terminal output screen</div>
           <div><span class="cmd-name">exit</span> &bull; Disconnect and close terminal drawer</div>
+        </div>`;
+      break;
+
+    case "resume":
+    case "dossier":
+    case "cv":
+      setTimeout(() => {
+        if (typeof openDossierModal === "function") openDossierModal();
+      }, 250);
+      response = `
+        <div class="term-box">
+          <div class="term-box-title">📄 FLIGHT DOSSIER // VERIFIED RESUME</div>
+          <div>Opening interactive flight dossier modal on screen...</div>
+          <div style="margin-top: 8px;">
+            <a href="assets/sriram-harshit-resume.pdf" download class="term-btn-action" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 6px; color: #38bdf8; text-decoration: none; font-weight: 600;">
+              <i class="fas fa-file-pdf"></i> Download PDF Dossier
+            </a>
+          </div>
         </div>`;
       break;
 
@@ -2275,8 +2294,8 @@ function processCommand(rawCmd) {
           <div class="term-box-title">🛰️ TECHNICAL AVIONICS TELEMETRY</div>
           <div><strong>Languages:</strong> JavaScript (ES6+), Python, SQL (Relational/CRUD)</div>
           <div><strong>Frontend:</strong> React.js, Component Trees, HTML5, CSS3, Flexbox Grid</div>
-          <div><strong>Backend:</strong> Node.js, Express.js REST APIs, SQL Databases, MongoDB</div>
-          <div><strong>Ecosystem:</strong> Git, GitHub, NPM Packages, Chrome DevTools, Vercel</div>
+          <div><strong>Backend:</strong> Node.js, Express.js, Django (Python), REST APIs, SQL Databases, MongoDB</div>
+          <div><strong>Ecosystem:</strong> Git, GitHub, NPM Packages, Chrome DevTools, Vercel, Render</div>
         </div>`;
       break;
 
