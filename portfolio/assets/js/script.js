@@ -1502,8 +1502,7 @@ setupHorizontalScroll(
   ".projects-scroll",
   "#projects-left-btn",
   "#projects-right-btn",
-  406,
-  "#project-progress-fill"
+  406
 );
 
 // ==========================================
