@@ -44,6 +44,21 @@ export const projects = [
     codeLink: "https://github.com/Sriram-Harshit/DigitalHealthWallet",
     demoLink: "https://digital-health-wallet-theta.vercel.app/",
   },
+  {
+    id: "omni-analytics",
+    name: "OmniAnalytics",
+    missionId: "EXPEDITION // 04",
+    tagline: "E-Commerce Intelligence & ML",
+    type: "analytics",
+    themeColor: "amber",
+    urlDisplay: "ecommerce-analytics.onrender.com",
+    description:
+      "A production e-commerce intelligence & ML platform processing 99,400+ transactional records with predictive delivery risk classifiers and sub-100ms analytical dashboards.",
+    tags: ["Python", "Django", "Scikit-Learn", "Pandas", "Chart.js", "Render"],
+    preview: "https://ecommerce-analytics-gcm8.onrender.com/ml-results/",
+    codeLink: "https://github.com/Sriram-Harshit/ecommerce_analytics",
+    demoLink: "https://ecommerce-analytics-gcm8.onrender.com/ml-results/",
+  },
 ];
 export const certificates = [
   {

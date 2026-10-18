@@ -1331,6 +1331,28 @@ function getProjectMockupHtml(project) {
           <span>NEURAL LOGIC // REALTIME FLIP STATE</span>
         </div>
       </div>`;
+  } else if (project.type === "analytics" || project.type === "ml") {
+    return `
+      <div class="mockup-screen mockup-analytics">
+        <div class="mock-analytics-header">
+          <span class="analytics-portal-brand"><i class="fas fa-chart-line"></i> OmniAnalytics // ML</span>
+          <span class="analytics-ml-badge"><i class="fas fa-brain"></i> SCIKIT-LEARN</span>
+        </div>
+        <div class="mock-analytics-bars">
+          <div class="mock-bar" style="height: 45%;"></div>
+          <div class="mock-bar" style="height: 75%;"></div>
+          <div class="mock-bar" style="height: 55%;"></div>
+          <div class="mock-bar" style="height: 95%;"></div>
+          <div class="mock-bar" style="height: 80%;"></div>
+          <div class="mock-bar" style="height: 100%;"></div>
+          <div class="mock-bar" style="height: 65%;"></div>
+        </div>
+        <div class="mock-analytics-chips">
+          <span class="h-chip"><i class="fas fa-database"></i> 99.4K Records</span>
+          <span class="h-chip"><i class="fas fa-bolt"></i> &lt;100ms Cache</span>
+          <span class="h-chip active"><i class="fas fa-robot"></i> Delay Risk ML</span>
+        </div>
+      </div>`;
   } else {
     return `
       <div class="mockup-screen mockup-health">
@@ -2203,10 +2225,11 @@ function processCommand(rawCmd) {
     case "expeditions":
       response = `
         <div class="term-box">
-          <div class="term-box-title">🚀 ACTIVE DEEP SPACE EXPEDITIONS</div>
+          <div class="term-box-title">🚀 ACTIVE DEEP SPACE EXPEDITIONS (04 MISSIONS)</div>
           <div>1. <strong>TheStore</strong> [MERN Stack] &rarr; <a href="https://the-store-fra4.vercel.app/#/" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/TheStore" target="_blank" class="term-link">GitHub ↗</a></div>
           <div>2. <strong>Cosmic Memory Matrix</strong> [Algorithms/UI] &rarr; <a href="https://memory-game-rouge-phi.vercel.app/" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/Memory-game" target="_blank" class="term-link">GitHub ↗</a></div>
           <div>3. <strong>Digital Health Wallet</strong> [Patient Vitals Vault] &rarr; <a href="https://digital-health-wallet-theta.vercel.app/" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/DigitalHealthWallet" target="_blank" class="term-link">GitHub ↗</a></div>
+          <div>4. <strong>OmniAnalytics</strong> [Django & Scikit-Learn ML] &rarr; <a href="https://ecommerce-analytics-gcm8.onrender.com/ml-results/" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/ecommerce_analytics" target="_blank" class="term-link">GitHub ↗</a></div>
         </div>`;
       break;
 

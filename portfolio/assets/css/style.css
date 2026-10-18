@@ -1667,6 +1667,7 @@ section {
 .project-card.theme-cyan   { --card-accent: #00f2fe; --card-glow: rgba(0, 242, 254, 0.25); }
 .project-card.theme-purple { --card-accent: #c084fc; --card-glow: rgba(192, 132, 252, 0.25); }
 .project-card.theme-green  { --card-accent: #34d399; --card-glow: rgba(52, 211, 153, 0.25); }
+.project-card.theme-amber  { --card-accent: #f59e0b; --card-glow: rgba(245, 158, 11, 0.28); }
 
 .project-card:hover {
   transform: translateY(-8px);
@@ -1976,6 +1977,69 @@ section {
   background: rgba(52, 211, 153, 0.12);
   color: #34d399;
   border-color: rgba(52, 211, 153, 0.3);
+}
+
+/* 4. OmniAnalytics Mockup */
+.mockup-analytics {
+  background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.14), transparent 70%), #140d04;
+}
+
+.mock-analytics-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.analytics-portal-brand {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.analytics-portal-brand i { color: #f59e0b; }
+
+.analytics-ml-badge {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  padding: 2px 7px;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 6px;
+  color: #fbbf24;
+}
+
+.mock-analytics-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 38px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(245, 158, 11, 0.18);
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin: 6px 0;
+}
+
+.mock-bar {
+  flex: 1;
+  background: linear-gradient(180deg, #f59e0b, rgba(245, 158, 11, 0.18));
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.35);
+  transition: height 0.3s ease;
+}
+
+.mock-analytics-chips {
+  display: flex;
+  gap: 6px;
+}
+
+.mock-analytics-chips .h-chip.active {
+  background: rgba(245, 158, 11, 0.14);
+  color: #fbbf24;
+  border-color: rgba(245, 158, 11, 0.35);
 }
 
 /* Shared Telemetry Footer inside mockups */
