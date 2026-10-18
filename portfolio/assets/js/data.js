@@ -41,7 +41,7 @@ export const projects = [
       "A digital clinical records portal built with React for storing medical histories, biometric health tracking, and encrypted client-side persistence.",
     tags: ["React", "JavaScript", "Web Storage", "HealthTech"],
     preview: "https://digital-health-wallet-theta.vercel.app/",
-    codeLink: "https://github.com/Sriram-Harshit/Digital-Health-Wallet",
+    codeLink: "https://github.com/Sriram-Harshit/DigitalHealthWallet",
     demoLink: "https://digital-health-wallet-theta.vercel.app/",
   },
 ];

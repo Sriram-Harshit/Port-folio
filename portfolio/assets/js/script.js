@@ -2204,9 +2204,9 @@ function processCommand(rawCmd) {
       response = `
         <div class="term-box">
           <div class="term-box-title">🚀 ACTIVE DEEP SPACE EXPEDITIONS</div>
-          <div>1. <strong>TheStore</strong> [MERN Stack] &rarr; <a href="https://the-store-full-stack.vercel.app/" target="_blank" class="term-link">https://the-store-full-stack.vercel.app/ ↗</a></div>
-          <div>2. <strong>Cosmic Memory Matrix</strong> [Algorithms/UI] &rarr; <a href="https://github.com/Sriram-Harshit/memory-game" target="_blank" class="term-link">Codebase on GitHub ↗</a></div>
-          <div>3. <strong>Digital Health Wallet</strong> [Patient Vitals Vault] &rarr; <a href="https://digital-health-wallet-theta.vercel.app/" target="_blank" class="term-link">https://digital-health-wallet-theta.vercel.app/ ↗</a></div>
+          <div>1. <strong>TheStore</strong> [MERN Stack] &rarr; <a href="https://the-store-fra4.vercel.app/#/" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/TheStore" target="_blank" class="term-link">GitHub ↗</a></div>
+          <div>2. <strong>Cosmic Memory Matrix</strong> [Algorithms/UI] &rarr; <a href="https://memory-game-rouge-phi.vercel.app/" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/Memory-game" target="_blank" class="term-link">GitHub ↗</a></div>
+          <div>3. <strong>Digital Health Wallet</strong> [Patient Vitals Vault] &rarr; <a href="https://digital-health-wallet-theta.vercel.app/" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/DigitalHealthWallet" target="_blank" class="term-link">GitHub ↗</a></div>
         </div>`;
       break;
 
