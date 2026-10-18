@@ -2316,7 +2316,7 @@ function processCommand(rawCmd) {
           <div><strong>ROLE:</strong> Software Engineer Intern & Full-Stack Developer</div>
           <div><strong>CURRENT MISSION:</strong> Edvak EHR (Software Engineer Intern)</div>
           <div><strong>BASE:</strong> Hyderabad, India [IST / UTC+5:30]</div>
-          <div><strong>DIRECTIVE:</strong> Engineering resilient, scalable full-stack applications with MERN Stack & Python.</div>
+          <div><strong>DIRECTIVE:</strong> Engineering resilient, scalable full-stack applications with Full-Stack Web Technologies & Python.</div>
         </div>`;
       break;
 
