@@ -1370,9 +1370,9 @@ function getProjectMockupHtml(project) {
     return `
       <div class="mockup-screen mockup-game">
         <div class="mock-game-hud">
-          <span class="hud-item"><i class="fas fa-stopwatch"></i> 00:18s</span>
-          <span class="hud-item mode"><i class="fas fa-gamepad"></i> 8 PAIRS</span>
-          <span class="hud-item"><i class="fas fa-bullseye"></i> 06 MOVES</span>
+          <span class="hud-item"><i class="fas fa-brain"></i> NeuroVault // Suite</span>
+          <span class="hud-item mode"><i class="fas fa-gamepad"></i> 8 BENCHMARKS</span>
+          <span class="hud-item"><i class="fas fa-wave-square"></i> WEB AUDIO</span>
         </div>
         <div class="mock-game-matrix">
           <div class="matrix-card matched"><i class="fas fa-brain"></i></div>
@@ -1386,7 +1386,7 @@ function getProjectMockupHtml(project) {
         </div>
         <div class="mock-telemetry-status">
           <span class="status-pulse-dot"></span>
-          <span>NEURAL LOGIC // REALTIME FLIP STATE</span>
+          <span>8 COGNITIVE DISCIPLINES // 60 FPS CANVAS</span>
         </div>
       </div>`;
   } else if (project.type === "analytics" || project.type === "ml") {
@@ -2285,10 +2285,10 @@ function processCommand(rawCmd) {
       response = `
         <div class="term-box">
           <div class="term-box-title">🚀 ACTIVE DEEP SPACE EXPEDITIONS (04 MISSIONS)</div>
-          <div>1. <strong>TheStore</strong> [MERN Stack] &rarr; <a href="https://the-store-fra4.vercel.app/#/" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/TheStore" target="_blank" class="term-link">GitHub ↗</a></div>
-          <div>2. <strong>Cosmic Memory Matrix</strong> [Algorithms/UI] &rarr; <a href="https://memory-game-rouge-phi.vercel.app/" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/Memory-game" target="_blank" class="term-link">GitHub ↗</a></div>
-          <div>3. <strong>Digital Health Wallet</strong> [Patient Vitals Vault] &rarr; <a href="https://digital-health-wallet-theta.vercel.app/" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/DigitalHealthWallet" target="_blank" class="term-link">GitHub ↗</a></div>
-          <div>4. <strong>OmniAnalytics</strong> [Django & Scikit-Learn ML] &rarr; <a href="https://ecommerce-analytics-gcm8.onrender.com/ml-results/" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/ecommerce_analytics" target="_blank" class="term-link">GitHub ↗</a></div>
+          <div>1. <strong>TheStore</strong> [Enterprise MERN Marketplace] &rarr; <a href="https://the-store-fra4.vercel.app/welcome" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/The-Store" target="_blank" class="term-link">GitHub ↗</a></div>
+          <div>2. <strong>NeuroVault</strong> [Cognitive Training & Web Audio] &rarr; <a href="https://memory-game-rouge-phi.vercel.app/" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/Memory-game" target="_blank" class="term-link">GitHub ↗</a></div>
+          <div>3. <strong>OmniAnalytics</strong> [Django & Scikit-Learn ML] &rarr; <a href="https://ecommerce-analytics-gcm8.onrender.com/ml-results/" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/ecommerce_analytics" target="_blank" class="term-link">GitHub ↗</a></div>
+          <div>4. <strong>Digital Health Wallet</strong> [Patient Vitals Vault] &rarr; <a href="https://digital-health-wallet-theta.vercel.app/" target="_blank" class="term-link">Live App ↗</a> | <a href="https://github.com/Sriram-Harshit/DigitalHealthWallet" target="_blank" class="term-link">GitHub ↗</a></div>
         </div>`;
       break;
 
