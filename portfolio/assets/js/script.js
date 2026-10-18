@@ -1299,25 +1299,33 @@ function setupHorizontalScroll(
     scrollContainer.scrollBy({ left: scrollStep, behavior: "smooth" });
   });
 
-  // Smooth mouse-wheel side-scrolling when hovering over the carousel
-  scrollContainer.addEventListener(
-    "wheel",
-    (e) => {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-        if (maxScroll > 0) {
-          if (
-            (e.deltaY < 0 && scrollContainer.scrollLeft > 0) ||
-            (e.deltaY > 0 && scrollContainer.scrollLeft < maxScroll)
-          ) {
-            e.preventDefault();
-            scrollContainer.scrollBy({ left: e.deltaY * 0.9, behavior: "auto" });
-          }
-        }
-      }
-    },
-    { passive: false }
-  );
+  // Intuitive Mouse Click-and-Drag Horizontal Side-Scrolling
+  let isDown = false;
+  let startX = 0;
+  let scrollStart = 0;
+
+  scrollContainer.addEventListener("mousedown", (e) => {
+    if (e.target.closest("a, button, input, textarea")) return;
+    isDown = true;
+    scrollContainer.style.cursor = "grabbing";
+    startX = e.pageX - scrollContainer.offsetLeft;
+    scrollStart = scrollContainer.scrollLeft;
+  });
+
+  window.addEventListener("mouseup", () => {
+    if (isDown) {
+      isDown = false;
+      scrollContainer.style.cursor = "";
+    }
+  });
+
+  scrollContainer.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainer.offsetLeft;
+    const walk = (x - startX) * 1.4;
+    scrollContainer.scrollLeft = scrollStart - walk;
+  });
 
   scrollContainer.addEventListener("scroll", updateControls, { passive: true });
   window.addEventListener("resize", updateControls, { passive: true });
