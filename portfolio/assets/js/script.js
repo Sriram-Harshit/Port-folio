@@ -1277,10 +1277,10 @@ function setupHorizontalScroll(
     }
 
     const currentScroll = scrollContainer.scrollLeft;
-    leftBtn.style.opacity = currentScroll <= 6 ? "0.35" : "1";
-    leftBtn.style.pointerEvents = currentScroll <= 6 ? "none" : "auto";
-    rightBtn.style.opacity = currentScroll >= maxScroll - 6 ? "0.35" : "1";
-    rightBtn.style.pointerEvents = currentScroll >= maxScroll - 6 ? "none" : "auto";
+    leftBtn.style.opacity = "1";
+    leftBtn.style.pointerEvents = "auto";
+    rightBtn.style.opacity = "1";
+    rightBtn.style.pointerEvents = "auto";
 
     if (progressFillSelector) {
       const progressFill = document.querySelector(progressFillSelector);
@@ -1292,11 +1292,24 @@ function setupHorizontalScroll(
   };
 
   leftBtn.addEventListener("click", () => {
-    scrollContainer.scrollBy({ left: -scrollStep, behavior: "smooth" });
+    const currentScroll = scrollContainer.scrollLeft;
+    if (currentScroll <= 12) {
+      // Loop smoothly to end so navigation never feels dead
+      scrollContainer.scrollTo({ left: scrollContainer.scrollWidth, behavior: "smooth" });
+    } else {
+      scrollContainer.scrollBy({ left: -scrollStep, behavior: "smooth" });
+    }
   });
 
   rightBtn.addEventListener("click", () => {
-    scrollContainer.scrollBy({ left: scrollStep, behavior: "smooth" });
+    const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+    const currentScroll = scrollContainer.scrollLeft;
+    if (currentScroll >= maxScroll - 12) {
+      // Loop smoothly to start so navigation never feels dead
+      scrollContainer.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      scrollContainer.scrollBy({ left: scrollStep, behavior: "smooth" });
+    }
   });
 
   // Intuitive Mouse Click-and-Drag Horizontal Side-Scrolling
@@ -1685,12 +1698,21 @@ const dockPrev = document.getElementById("cert-dock-prev");
 const dockNext = document.getElementById("cert-dock-next");
 if (dockPrev && certContainer) {
   dockPrev.addEventListener("click", () => {
-    certContainer.scrollBy({ left: -380, behavior: "smooth" });
+    if (certContainer.scrollLeft <= 12) {
+      certContainer.scrollTo({ left: certContainer.scrollWidth, behavior: "smooth" });
+    } else {
+      certContainer.scrollBy({ left: -364, behavior: "smooth" });
+    }
   });
 }
 if (dockNext && certContainer) {
   dockNext.addEventListener("click", () => {
-    certContainer.scrollBy({ left: 380, behavior: "smooth" });
+    const maxScroll = certContainer.scrollWidth - certContainer.clientWidth;
+    if (certContainer.scrollLeft >= maxScroll - 12) {
+      certContainer.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      certContainer.scrollBy({ left: 364, behavior: "smooth" });
+    }
   });
 }
 

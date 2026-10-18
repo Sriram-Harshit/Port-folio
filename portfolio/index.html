@@ -32,12 +32,12 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="assets/css/style.css?v=20261018_fullstack_v8" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20261018_carousel_v9" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <script type="module" defer src="assets/js/script.js?v=20261018_fullstack_v8"></script>
+    <script type="module" defer src="assets/js/script.js?v=20261018_carousel_v9"></script>
   </head>
   <body>
     <!-- Interactive Background Cosmic Canvas -->
@@ -505,6 +505,56 @@
 
     <!-- Certificates Section ("Flight Credentials") -->
     <section id="certificates" class="certificates">
+      <!-- Left Cosmic Telemetry Wing (Fills Left Viewport Rail on Wide Displays) -->
+      <aside class="flank-hud-wing flank-hud-left" aria-hidden="true">
+        <div class="flank-hud-bracket top-bracket"></div>
+        <div class="flank-hud-telemetry">
+          <div class="flank-gyro-beacon">
+            <span class="gyro-ring ring-1"></span>
+            <span class="gyro-ring ring-2"></span>
+            <i class="fas fa-satellite"></i>
+          </div>
+          <div class="flank-meta-stack">
+            <span class="flank-label">// TELEMETRY ORBIT</span>
+            <span class="flank-val">SECTOR 04-A</span>
+            <span class="flank-detail">HYDERABAD IST</span>
+          </div>
+        </div>
+        <div class="flank-ladder-ticks">
+          <span class="tick tick-bright"></span>
+          <span class="tick"></span>
+          <span class="tick"></span>
+          <span class="tick tick-bright"></span>
+          <span class="tick"></span>
+        </div>
+        <div class="flank-hud-bracket bottom-bracket"></div>
+      </aside>
+
+      <!-- Right Cosmic Telemetry Wing (Fills Right Viewport Rail on Wide Displays) -->
+      <aside class="flank-hud-wing flank-hud-right" aria-hidden="true">
+        <div class="flank-hud-bracket top-bracket"></div>
+        <div class="flank-hud-telemetry">
+          <div class="flank-gyro-beacon purple-theme">
+            <span class="gyro-ring ring-1"></span>
+            <span class="gyro-ring ring-2"></span>
+            <i class="fas fa-certificate"></i>
+          </div>
+          <div class="flank-meta-stack">
+            <span class="flank-label">// AVIONICS MATRIX</span>
+            <span class="flank-val">10/10 VERIFIED</span>
+            <span class="flank-detail">NASSCOM &bull; NXTWAVE</span>
+          </div>
+        </div>
+        <div class="flank-ladder-ticks">
+          <span class="tick tick-bright"></span>
+          <span class="tick"></span>
+          <span class="tick tick-bright"></span>
+          <span class="tick"></span>
+          <span class="tick tick-bright"></span>
+        </div>
+        <div class="flank-hud-bracket bottom-bracket"></div>
+      </aside>
+
       <div class="section-header">
         <span class="section-tag">// 04 FLIGHT CREDENTIALS</span>
         <h2>Verified Competencies &amp; Certifications</h2>
@@ -538,11 +588,13 @@
         <button class="scroll-btn left-btn rocket-nav-btn" id="certificates-left-btn" aria-label="Propel Certificates Left" title="Propel Left">
           <span class="rocket-thruster-exhaust left-exhaust"></span>
           <i class="fas fa-rocket rocket-icon-left"></i>
+          <span class="rocket-hud-tooltip left-tooltip">PREV ORBIT</span>
         </button>
 
         <div class="certificates-container" id="certificates-container"></div>
 
         <button class="scroll-btn right-btn rocket-nav-btn" id="certificates-right-btn" aria-label="Propel Certificates Right" title="Propel Right">
+          <span class="rocket-hud-tooltip right-tooltip">NEXT ORBIT</span>
           <i class="fas fa-rocket rocket-icon-right"></i>
           <span class="rocket-thruster-exhaust right-exhaust"></span>
         </button>
